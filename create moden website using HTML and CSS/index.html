@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
 </head>
 <body>
     <!-- top banner -->
@@ -21,7 +22,7 @@
             <a href="#" class="company-logo">
                 <img src="./assets/asset 27.svg" alt="company logo">
             </a>
-            <div class="nav-linkds">
+            <div class="nav-linkds" id="nav-links">
                  <ul class="flex">
                     <li><a href="#" class="hover-link">Product</a></li>
                     <li><a href="#" class="hover-link">Customer</a></li>
@@ -31,6 +32,9 @@
                     <li><a href="#" class="hover-link  primary-button">Sign up</a></li>
                  </ul>
             </div>
+            <a href="" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-duotone fa-bars"></i>
+            </a>
          </div>
     </nav>
         <!--Header section completed -->
@@ -62,7 +66,7 @@
                 <img src="./assets/asset 7.png" alt="" class="logo">
                 <img src="./assets/asset 9.png" alt="" class="logo">
                 <img src="./assets/asset 19.png" alt="" class="logo">
-                <img src="./assets/asset 22.png" alt=""  class="logo">
+                <img src="./assets/asset 22.png" alt="" class="logo">
             </div>
             </div>
         </section>
@@ -130,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="container flex big-feature-container">
+            <div class="container flex big-feature-container" id="second-big-feature">
                 
                 <div class="feature-desc flex">
                     <h4>Optimisation for</h4>
@@ -143,7 +147,7 @@
                 </div>
             </div>
 
-            <div class="container flex big-feature-container">
+            <div class="container flex big-feature-container" >
                 <div class="feature-img">
                     <img src="./assets/asset 24.png" alt="">
                 </div>
@@ -243,7 +247,7 @@
                 <a href="" class="link-column">Book a demo</a>
             </div>
             <div class="link-coloum flex">
-                <h3>Methodologies</h3>
+                <h3>Methodologies </h3>
                 <a href="" class="link-column">Card sorting</a>
                 <a href="" class="link-column">Prototype</a>
                 <a href="" class="link-column">First click tests</a>
@@ -276,5 +280,12 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/8ca6c05fcf.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+         toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+         })
+    </script>
 </body>
 </html>
